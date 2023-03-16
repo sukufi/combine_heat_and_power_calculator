@@ -29,17 +29,19 @@ layout = [
     [sg.Text("November:", size=(15,1)), sg.InputText(key = "November")],
     [sg.Text("December:", size=(15,1)), sg.InputText(key = "December")],
     
-    [sg.Text("Output:"), sg.Input(key = "-FolderDirectory-"), sg.FolderBrowse()],
+    [sg.Text("Output:", size=(15,1)), sg.Input(key = "-FolderDirectory-", disabled= True, text_color="black"), sg.FolderBrowse(button_text= "Browse", key= "Browse")],
 
-    [sg.Submit(), sg.Button("Clear"), sg.Exit()]
+    [sg.Submit(), sg.Button("Clear"), sg.Exit(),sg.Push(), sg.Button("Credits")]
     
         ]
 
 window = sg.Window("Combined Heat And Power System Calculator", layout)
 
 def clear_input():
+
     for key in value:
-        window[key]("")
+        if key != "Browse":
+            window[key].update("")
     return None
 
 def value_check(dict):
@@ -72,6 +74,9 @@ while True:
         clear_input()
 
 # KULLANICI BOŞ VEYA HATALI GİRİŞ YAPACAK HANGİ AYLARIN YANIŞ GİRİLDİĞİNİ SÖYLEYECEK TEKRAR GİRİŞ YAPMASINI İSTEYECE
+    
+    if event == "Credits":
+        sg.popup("Desinged by Sukufi:)")
 
     if event == "Submit":
         
