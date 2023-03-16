@@ -9,6 +9,9 @@ regular expression added
 v.03
 regular expression improved
 
+v.05
+user can save to desired location.
+
 
 futureworks
 -using keys to append excel

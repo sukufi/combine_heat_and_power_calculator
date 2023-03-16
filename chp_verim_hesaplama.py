@@ -94,6 +94,7 @@ while True:
 
         else:
             
+            
             wrong_entry = value_check(value)
             
             if output_folder == "":
