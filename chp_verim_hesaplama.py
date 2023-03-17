@@ -5,7 +5,7 @@ sg.theme("Dark")
 
 # GİRİŞ İÇİN CELL VE EXCEL FİLE BELİRLE
 cell = ["E4","F4","G4","H4","I4","J4","K4","L4","M4","N4","O4","P4"]
-excel_file = "CHP_verim.xlsx"
+excel_file = "assets/template.xlsx"
 output_excel_file = "CHP_verim.xlsx"
 
 wb = load_workbook(excel_file)
