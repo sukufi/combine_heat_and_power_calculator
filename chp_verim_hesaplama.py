@@ -4,7 +4,8 @@ from openpyxl import Workbook, load_workbook
 sg.theme("Dark")
 
 # GİRİŞ İÇİN CELL VE EXCEL FİLE BELİRLE
-cell = ["E4","F4","G4","H4","I4","J4","K4","L4","M4","N4","O4","P4"]
+cell_elc = ["E4","F4","G4","H4","I4","J4","K4","L4","M4","N4","O4","P4"]
+cell_ngas = ["E5","F5","G5","H5","I5","J5","K5","L5","M5","N5","O5","P5"]
 excel_file = "assets/template.xlsx"
 output_excel_file = "CHP_verim.xlsx"
 
@@ -14,22 +15,22 @@ ws = wb.active
 
 layout = [
 
-    [sg.Text("Please fill in the blanks with the monthly electricity consumption in kWh.")],
+    [sg.Text("Please fill in the blanks with the \nmonthly electricity(kWh) and Natural Gas(m3) consumption")],
+    [sg.Text("", size=(15,1)), sg.Text("Electricity", size=(15,1), justification='center'), sg.Text("Natural Gas", size=(15,1))],
+    [sg.Text("January:", size=(15,1)), sg.InputText(key = "January_elc" , size=(15,1)), sg.InputText(key = "January_ngas", size=(15,1))],
+    [sg.Text("February:", size=(15,1)), sg.InputText(key = "February_elc" , size=(15,1)), sg.InputText(key = "February_ngas", size=(15,1))],
+    [sg.Text("March:", size=(15,1)), sg.InputText(key = "March_elc", size=(15,1)), sg.InputText(key = "March_ngas", size=(15,1))],
+    [sg.Text("April:", size=(15,1)), sg.InputText(key = "April_elc", size=(15,1)), sg.InputText(key = "April_ngas", size=(15,1))],
+    [sg.Text("May:", size=(15,1)), sg.InputText(key = "May_elc", size=(15,1)), sg.InputText(key = "May_ngas", size=(15,1))],
+    [sg.Text("June:", size=(15,1)), sg.InputText(key = "June_elc", size=(15,1)), sg.InputText(key = "June_ngas", size=(15,1))],
+    [sg.Text("July:", size=(15,1)), sg.InputText(key = "July_elc", size=(15,1)), sg.InputText(key = "July_ngas", size=(15,1))],
+    [sg.Text("August:", size=(15,1)), sg.InputText(key = "August_elc", size=(15,1)), sg.InputText(key = "August_ngas", size=(15,1))],
+    [sg.Text("September:", size=(15,1)), sg.InputText(key = "September_elc", size=(15,1)), sg.InputText(key = "September_ngas", size=(15,1))],
+    [sg.Text("October:", size=(15,1)), sg.InputText(key = "October_elc", size=(15,1)), sg.InputText(key = "October_ngas", size=(15,1))],
+    [sg.Text("November:", size=(15,1)), sg.InputText(key = "November_elc", size=(15,1)), sg.InputText(key = "November_ngas", size=(15,1))],
+    [sg.Text("December:", size=(15,1)), sg.InputText(key = "December_elc", size=(15,1)), sg.InputText(key = "December_ngas", size=(15,1))],
     
-    [sg.Text("January:", size=(15,1)), sg.InputText(key = "January")],
-    [sg.Text("February:", size=(15,1)), sg.InputText(key = "February")],
-    [sg.Text("March:", size=(15,1)), sg.InputText(key = "March")],
-    [sg.Text("April:", size=(15,1)), sg.InputText(key = "April")],
-    [sg.Text("May:", size=(15,1)), sg.InputText(key = "May")],
-    [sg.Text("June:", size=(15,1)), sg.InputText(key = "June")],
-    [sg.Text("July:", size=(15,1)), sg.InputText(key = "July")],
-    [sg.Text("August:", size=(15,1)), sg.InputText(key = "August")],
-    [sg.Text("September:", size=(15,1)), sg.InputText(key = "September")],
-    [sg.Text("October:", size=(15,1)), sg.InputText(key = "October")],
-    [sg.Text("November:", size=(15,1)), sg.InputText(key = "November")],
-    [sg.Text("December:", size=(15,1)), sg.InputText(key = "December")],
-    
-    [sg.Text("Output:", size=(15,1)), sg.Input(key = "-FolderDirectory-", disabled= True, text_color="black"), sg.FolderBrowse(button_text= "Browse", key= "Browse")],
+    [sg.Text("Output:", size=(15,1)), sg.Input(key = "-FolderDirectory-", disabled= True, text_color="black", size=(32,1)), sg.FolderBrowse(button_text= "Browse", key= "Browse")],
 
     [sg.Submit(), sg.Button("Clear"), sg.Exit(),sg.Push(), sg.Button("Credits")]
     
@@ -76,7 +77,7 @@ while True:
 # KULLANICI BOŞ VEYA HATALI GİRİŞ YAPACAK HANGİ AYLARIN YANIŞ GİRİLDİĞİNİ SÖYLEYECEK TEKRAR GİRİŞ YAPMASINI İSTEYECE
     
     if event == "Credits":
-        sg.popup("Desinged by Sukufi:)")
+        sg.popup("Desinged by \nKaan, Esat, Emre")
 
     if event == "Submit":
         
@@ -87,12 +88,19 @@ while True:
         if value_check(value) == [] and output_folder != "":
             
             save_spot = output_folder + "/" + output_excel_file
-            electric_usage = list(value.values())
+            all_usage = list(value.values())
             i = 0
-            for x in electric_usage:
-                ws[cell[i]].value = int(x)
-                wb.save(save_spot)
+            j = 0
+            for x in all_usage:
+                if i % 2 == 0:
+                    ws[cell_elc[j]].value = int(x)
+                    wb.save(save_spot)
+                else:
+                    ws[cell_ngas[j]].value = int(x)
+                    wb.save(save_spot)
+                    j = j + 1
                 i = i + 1
+
             
             sg.popup("Data Saved!")
             window.close()
