@@ -7,16 +7,21 @@ Projemiz dahilinde bir python programı oluşturduk. Bu python programı sayesin
 Programın çalıştırılması için bilgisayarınızda python yüklü olması gerekiyor eğer değilse lütfen yükleyin.
 
 
-Python yüklü ise sıradaki adıma geçebiliriz. MacOS kullandığınız için .exe' dosyaları çalıştırmadığı için kütüphaneleri elle kurup programı aşağıdaki linkte videoda anlattığım şekilde çalıştırmamız gerekiyor.
+Python yüklü ise sıradaki adıma geçebiliriz. MacOS kullandığınız için .exe dosyaları çalıştırmadığı için kütüphaneleri elle kurup programı aşağıdaki linkte videoda anlattığım şekilde çalıştırmamız gerekiyor.
 
 https://drive.google.com/file/d/1t60HWmh_tApv_Q1HxyMvSk9Q-wT5vzPR/view?usp=sharing
 
-Eğer herhangi bir sorunla karşılaşırsanız lütfen bana haber verin.
+Bu adımları uygulayıp programı bir kere çalıştırdıktan sonra aynı terminal penceresine "python3 chp_verim_hesapla.py" yazarak programı tekrar çalıştırabilirsiniz
 
+Eğer programı terminal kapalı iken tekrar baştan açmak istiyorsanız paylaştığım videodaki yalnızca "pip3 -r install requirements.txt" yazdığımız kısmını atlayarak tekrar baştan çalıştırabilirsiniz
 
 Program Butonları Hakkında: Default butonunun işlevi bizim hazır olarak Rumeli hastanesinden aldığımız verilerdir. Default butonuna bastıktan sonra çıkan popup'ı kapatıp Browse butonuna basıp nereye kaydetmek istediğinizi seçip Submit Butonuna basmanız yeterlidir başka bir girdiye gerek yoktur. 
 
 Okuduğunuz için Teşekkürler.
 
 
-KAAN MEHMET TOPRAK kaan.toprak@gmail.com +90 5396600120
+Eğer herhangi bir sorunla karşılaşırsanız lütfen bana haber verin.
+
+KAAN MEHMET TOPRAK kaanm.toprak@gmail.com +90 539 660 0120
+
+Dilerseniz Windows bilgisayarlar için .exe uzantılı dosya da oluşturabilirim.
