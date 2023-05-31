@@ -1,5 +1,0 @@
-dict = {'January Electric': '127930', 'January Natural gas': '17564', 'February Electric': '102663', 'Februar Natural gas': '15502', 'March Electric': '131908', 'March Natural gas': '14590', 'April Electric': '116119', 'April Natural gas': '13561', 'May Electric': '123626', 'May Natural gas': '8504', 'June Electric': '143693', 'June Natural gas': '5156', 'July Electric': '138568', 'July Natural gas': '4489', 'August Electric': '154250', 'August Natural gas': '4980', 'September Electric': '145153', 'September Natural gas': '6567', 'October Electric': '134999', 'October Natural gas': '6990', 'November Electric': '132985', 'November Natural gas': '9314', 'December Electric': '104900', 'December Natural gas': '9608', 'T1 Work Time': '11', 'T2 Work Time': '5', 'T3 Work Time': '8', '-FolderDirectory-': '', 'Browse': ''}
-        
-dict['January Electric'] = 1
-
-print(dict)

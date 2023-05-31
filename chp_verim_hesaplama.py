@@ -3,7 +3,7 @@ from openpyxl import Workbook, load_workbook
 
 sg.theme("Dark")
 
-# GİRİŞ İÇİN CELL VE EXCEL FİLE BELİRLE
+
 cell_elc = ["B10","C10","D10","E10","F10","G10","H10","I10","J10","K10","L10","M10"]
 cell_ngas = ["B11","C11","D11","E11","F11","G11","H11","I11","J11","K11","L11","M11"]
 working_cell = ["L4","L5","L6"]
