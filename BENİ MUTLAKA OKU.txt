@@ -1,0 +1,22 @@
+
+
+Mustafa Hocam Merhaba,
+
+Projemiz dahilinde bir python programı oluşturduk. Bu python programı sayesinde kolayca elektrik, doğalgaz ve çalışma saatleri verilerini girerek hazır olarak bir fizibilite tablosu elde edebiliniyor.
+
+Programın çalıştırılması için bilgisayarınızda python yüklü olması gerekiyor eğer değilse lütfen yükleyin.
+
+
+Python yüklü ise sıradaki adıma geçebiliriz. MacOS kullandığınız için .exe' dosyaları çalıştırmadığı için kütüphaneleri elle kurup programı aşağıdaki linkte videoda anlattığım şekilde çalıştırmamız gerekiyor.
+
+https://drive.google.com/file/d/1t60HWmh_tApv_Q1HxyMvSk9Q-wT5vzPR/view?usp=sharing
+
+Eğer herhangi bir sorunla karşılaşırsanız lütfen bana haber verin.
+
+
+Program Butonları Hakkında: Default butonunun işlevi bizim hazır olarak Rumeli hastanesinden aldığımız verilerdir. Default butonuna bastıktan sonra çıkan popup'ı kapatıp Browse butonuna basıp nereye kaydetmek istediğinizi seçip Submit Butonuna basmanız yeterlidir başka bir girdiye gerek yoktur. 
+
+Okuduğunuz için Teşekkürler.
+
+
+KAAN MEHMET TOPRAK kaan.toprak@gmail.com +90 5396600120
