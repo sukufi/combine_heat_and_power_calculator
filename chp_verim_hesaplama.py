@@ -168,16 +168,17 @@ while True:
                 i = i + 1
 
 
-            if default_data == 1:
+            if default_data == 0:
                 ort_elektrik = ort_elektrik / 12
                 co_unit_list = co_unit_finder(ort_elektrik)
+            elif default_data == 1:
+                co_unit_list = [206, 246, 495]
 
             i = 0
             for x in co_unit_list:
                 ws[unit_cell[i]].value = int(x)
                 wb.save(save_spot)
                 i = i + 1
-
             
             sg.popup("Document Saved to Output Directory ")
             window.close()
